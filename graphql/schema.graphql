@@ -16,6 +16,40 @@ input BookInput {
   name: String
 }
 
+
+type Product {
+    Id: ID,
+    Name: String,
+    DepartmentId: String,
+    CategoryId: ID,
+    BrandId: ID,
+    LinkId: String,
+    RefId: String,
+    IsVisible: Boolean,
+    Description: String,
+    DescriptionShort: String,
+    ReleaseDate: String,
+    KeyWords: String,
+    Title: String,
+    IsActive: Boolean,
+    TaxCode: String,
+    MetaTagDescription: String,
+    SupplierId: ID,
+    ShowWithoutStock: Boolean,
+    AdWordsRemarketingCode: String,
+    LomadeeCampaignCode: String,
+    Score: String
+}
+
+
+input ProductInput {
+  Name: String,
+  Title: String,
+  MetaTagDescription: String
+}
+
+
+
 type Query {
   # Cache control can only be set at root fields
   book(id: ID!): Book
@@ -33,4 +67,5 @@ type Mutation {
   delete(id: String): Boolean
   editBook(id: ID!, book: BookInput!): Book
   newBook(book: BookInput!): Book
+  editProduct(sku:String!,prod:ProductInput!):Product
 }
