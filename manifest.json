@@ -1,7 +1,7 @@
 {
   "name": "graphql-service",
   "vendor": "estilospe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "title": "GraphQL Example",
   "description": "Reference app for VTEX IO GraphQL Services",
   "mustUpdateAt": "2022-01-04",
