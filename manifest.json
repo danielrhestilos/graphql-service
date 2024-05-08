@@ -12,9 +12,6 @@
     "graphql": "1.x",
     "node": "6.x"
   },
-  "scripts": {
-    "prereleasy": "bash lint.sh"
-  },
   "credentialType": "absolute",
   "policies": [
     {
