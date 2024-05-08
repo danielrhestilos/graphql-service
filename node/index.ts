@@ -10,6 +10,7 @@ import { editBook } from './resolvers/editBook'
 import { newBook } from './resolvers/newBook'
 import { source } from './resolvers/source'
 import { total } from './resolvers/total'
+import { editProduct } from './resolvers/editProduct'
 
 const MEDIUM_TIMEOUT_MS = 2 * 1000
 
@@ -17,6 +18,7 @@ declare global {
   // We declare a global Context type just to avoid re-writing ServiceContext<Clients, State> in every handler and resolver
   type Context = ServiceContext<Clients>
 }
+
 
 // Export a service that defines resolvers and clients' options
 export default new Service<Clients, RecorderState, ParamsContext>({
@@ -33,10 +35,14 @@ export default new Service<Clients, RecorderState, ParamsContext>({
       Book: {
         cacheId: prop('id'),
       },
+      // Product: {
+      //   productId: prop('id'),
+      // },
       Mutation: {
         delete: deleteBook,
         editBook,
         newBook,
+        editProduct
       },
       Query: {
         book,
